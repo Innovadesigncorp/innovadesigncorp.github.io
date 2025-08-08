@@ -1,122 +1,31 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Innova Design Corp</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-    body {
-      line-height: 1.6;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #111;
-      color: #fff;
-      padding: 3rem 1rem;
-      text-align: center;
-    }
-    header img {
-      width: 180px;
-      margin-bottom: 1rem;
-    }
-    header h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1.2rem;
-      opacity: 0.8;
-    }
-    nav {
-      background: #222;
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    section {
-      padding: 4rem 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #0a0a0a;
-    }
-    ul {
-      list-style: disc;
-      margin-left: 1.5rem;
-    }
-    .cta-button {
-      background: #007bff;
-      color: #fff;
-      padding: 1rem 2rem;
-      border: none;
-      margin-top: 1.5rem;
-      font-size: 1rem;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    footer {
-      background: #111;
-      color: #fff;
-      text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 2rem;
-    }
-    .gallery img {
-      width: 100%;
-      max-width: 400px;
-      margin: 1rem auto;
-      display: block;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-    input, textarea {
-      padding: 0.75rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 1rem;
-    }
-    .map {
-      margin-top: 2rem;
-      width: 100%;
-      height: 300px;
-      border: none;
-    }
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: white;
-      padding: 0.75rem 1.25rem;
-      border-radius: 50px;
-      font-weight: bold;
-      text-decoration: none;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+    body { line-height: 1.6; background: #f9f9f9; color: #333; }
+    header { background: #111; color: #fff; padding: 3rem 1rem; text-align: center; }
+    header img { width: 180px; margin-bottom: 1rem; }
+    header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    nav { background: #222; display: flex; justify-content: center; gap: 2rem; padding: 1rem; }
+    nav a { color: #fff; text-decoration: none; font-weight: bold; }
+    section { padding: 4rem 2rem; max-width: 900px; margin: auto; }
+    h2 { font-size: 2rem; margin-bottom: 1rem; }
+    ul { list-style: disc; margin-left: 1.5rem; }
+    .cta-button { background: #007bff; color: #fff; padding: 1rem 2rem; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; display: inline-block; margin-top: 1rem; }
+    form { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+    input, textarea { padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+    .gallery img { width: 100%; max-width: 400px; display: block; margin: 1rem auto; }
+    .map { width: 100%; height: 300px; border: none; margin-top: 2rem; }
+    .socials { display: flex; gap: 1rem; justify-content: center; margin-top: 1rem; }
+    .socials a { color: #333; text-decoration: none; font-weight: 600; }
+    footer { background: #111; color: #fff; text-align: center; padding: 2rem 1rem; margin-top: 3rem; }
+    .whatsapp { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; padding: 0.75rem 1.25rem; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
   </style>
 </head>
 <body>
@@ -131,74 +40,35 @@
     <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#gallery">Gallery</a>
+    <a href="#testimonials">Testimonials</a>
     <a href="#contact">Contact</a>
   </nav>
-
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Welcome to Innova Design Corp. We are a multidisciplinary firm offering expert Interior Design, Electrical, and Mechanical solutions tailored to your needs. Our team focuses on functionality, aesthetics, and technical precision.</p>
-    <ul>
-      <li>Turnkey Project Solutions</li>
-      <li>Experienced Design + MEP Team</li>
-      <li>Quality Work, On-Time Delivery</li>
-      <li>Transparent Pricing</li>
-    </ul>
-  </section>
-
-  <section id="services">
-    <h2>Services</h2>
-    <h3>Interior Design</h3>
-    <ul>
-      <li>Residential & Commercial Interiors</li>
-      <li>Modular Kitchens, Wardrobes, False Ceilings</li>
-      <li>Custom Furniture & Space Planning</li>
-    </ul>
-
-    <h3>Electrical Services</h3>
-    <ul>
-      <li>Complete Wiring & Lighting</li>
-      <li>Automation & Load Management</li>
-      <li>Energy-Efficient Upgrades</li>
-    </ul>
-
-    <h3>Mechanical Work</h3>
-    <ul>
-      <li>HVAC Systems</li>
-      <li>Plumbing & Fire Safety</li>
-      <li>Sanitary Installations</li>
-    </ul>
-  </section>
 
   <section id="gallery">
     <h2>Our Work Speaks for Itself</h2>
     <div class="gallery">
-      <img src="placeholder-kitchen.jpg" alt="Modular Kitchen – Greater Noida Project">
-      <img src="placeholder-lighting.jpg" alt="Lighting Automation – Retail Showroom">
-      <img src="placeholder-ceiling.jpg" alt="False Ceiling + Wiring – Residential Flat">
+      <img src="interior-design.jpg" alt="Modern Interior Design Living Room">
+      <img src="fea-analysis.jpg" alt="Finite Element Analysis - Mechanical Simulation">
+      <img src="electrical-installation.jpg" alt="Electrical Panel Installation Work">
     </div>
-  </section>
-
-  <section id="quote">
-    <h2>Get a Free Quote</h2>
-    <form>
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Requirements" rows="5" required></textarea>
-      <button type="submit" class="cta-button">Submit</button>
-    </form>
   </section>
 
   <section id="contact">
     <h2>Contact Us</h2>
     <p><strong>Innova Design Corp</strong></p>
-    <p>Phone: +91-XXXXXXXXXX</p>
+    <p>Phone: +91-8618671268</p>
     <p>Email: info@innovadesigncorp.com</p>
     <p>Website: www.innovadesigncorp.com</p>
-    <p>Office Address: [Your Office Address Here]</p>
-    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14014.072135337374!2d77.5003019!3d28.4642415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI3JzUzLjIiTiA3N8KwMzAnMTYuOCJF!5e0!3m2!1sen!2sin!4v1610000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+    <p>Office Address: 601/1, 1st Cross, Rajanna Colony, Vibhutipura, Bengaluru, Karnataka 560037</p>
+    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62273.46949698144!2d77.6452506!3d12.964065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae113a5bb5c89b%3A0xe3952db3dc04ac9c!2s601%2F1%2C%201st%20Cross%2C%20Rajanna%20Colony%2C%20Vibhutipura%2C%20Bengaluru%2C%20Karnataka%20560037!5e0!3m2!1sen!2sin!4v1691488888888!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+    <div class="socials">
+      <a href="https://instagram.com" target="_blank">Instagram</a>
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+      <a href="https://facebook.com" target="_blank">Facebook</a>
+    </div>
   </section>
 
-  <a class="whatsapp" href="https://wa.me/91XXXXXXXXXX" target="_blank">Chat on WhatsApp</a>
+  <a class="whatsapp" href="https://wa.me/918618671268" target="_blank">Chat on WhatsApp</a>
 
   <footer>
     <p>&copy; 2025 Innova Design Corp. All rights reserved.</p>
