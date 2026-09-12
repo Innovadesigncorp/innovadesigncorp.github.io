@@ -55,57 +55,87 @@ color:#fff;
 }
 
 .hero{
-max-width:800px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:45px;
+max-width:900px;
+text-align:left;
+}
+
+.hero-text{
+text-align:left;
 }
 
 .hero img{
-width:clamp(90px,15vw,160px);
-margin:auto;
+width:clamp(64px,9vw,110px);
+flex-shrink:0;
+margin:0;
 background:transparent;
 padding:0;
 border-radius:50%;
-margin-bottom:25px;
 filter:drop-shadow(0 8px 20px rgba(0,0,0,.35));
 }
 
 .hero h1{
-font-size:clamp(2rem,6vw,4rem);
+font-size:clamp(1.6rem,4.2vw,2.75rem);
 font-weight:800;
-letter-spacing:1px;
+letter-spacing:.5px;
 color:#ffffff;
 text-shadow:0 2px 12px rgba(0,0,0,.45);
-margin-bottom:15px;
+margin-bottom:12px;
 }
 
 .hero .subtitle{
-font-size:clamp(1rem,2.5vw,1.3rem);
+font-size:clamp(.8rem,1.6vw,1.05rem);
 font-weight:600;
-letter-spacing:1.5px;
+letter-spacing:1px;
 color:var(--blue-light);
-margin-bottom:18px;
+margin-bottom:16px;
 }
 
 .hero .tagline{
-font-size:clamp(.95rem,2.2vw,1.15rem);
+font-size:clamp(.8rem,1.5vw,1rem);
 font-style:italic;
 font-weight:400;
 color:rgba(255,255,255,.85);
-margin-bottom:22px;
+margin-bottom:18px;
 }
 
 .hero .services-line{
-font-size:clamp(.85rem,2vw,1rem);
+font-size:clamp(.7rem,1.3vw,.88rem);
 font-weight:600;
-letter-spacing:.5px;
+letter-spacing:.3px;
 color:#FFD9A8;
-margin-bottom:30px;
+margin-bottom:26px;
 }
 
 .buttons{
 display:flex;
-justify-content:center;
+justify-content:flex-start;
 gap:15px;
 flex-wrap:wrap;
+}
+
+@media(max-width:760px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-text{
+text-align:center;
+}
+
+.hero img{
+margin-bottom:15px;
+}
+
+.buttons{
+justify-content:center;
+}
+
 }
 
 .btn{
@@ -383,6 +413,8 @@ font-size:14px;
 
 <img src="Logo1.png">
 
+<div class="hero-text">
+
 <h1>INNOVA DESIGN CORP</h1>
 
 <p class="subtitle">INTEGRATED MEP ENGINEERING &amp; FACILITY SOLUTIONS</p>
@@ -394,6 +426,8 @@ font-size:14px;
 <div class="buttons">
 <a href="#quote" class="btn btn-primary">Get Free Quote</a>
 <a href="tel:+918618671268" class="btn btn-outline">Call Now</a>
+</div>
+
 </div>
 
 </div>
