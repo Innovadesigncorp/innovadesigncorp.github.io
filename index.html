@@ -1,117 +1,509 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Innova Design Corp</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <style>
-    body { margin: 0; font-family: 'Inter', sans-serif; background: #f5f5f5; color: #333; }
-    header { background: url('banner-interior.jpg') center/cover no-repeat; text-align: center; color: white; padding: 6rem 1rem; position: relative; }
-    header::after { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 0; }
-    header * { position: relative; z-index: 1; }
-    header img { width: 160px; margin-bottom: 1rem; background: white; padding: 5px; border-radius: 10px; }
-    header h1 { font-size: 2.8rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-    header p { font-size: 1.2rem; background: rgba(0,0,0,0.4); display: inline-block; padding: 0.5rem 1rem; border-radius: 5px; }
-    .cta-button { background: #007bff; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 5px; font-size: 1rem; text-decoration: none; display: inline-block; margin-top: 1.5rem; }
-    nav { background: #222; padding: 1rem; text-align: center; }
-    nav a { color: white; margin: 0 1rem; text-decoration: none; font-weight: bold; }
-    section { padding: 4rem 2rem; max-width: 960px; margin: auto; }
-    h2 { font-size: 2rem; margin-bottom: 1rem; text-align: center; }
-    .services { display: flex; flex-wrap: wrap; justify-content: space-around; gap: 1rem; }
-    .service-box { background: white; border-radius: 10px; padding: 1.5rem; flex: 1 1 280px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; }
-    .gallery img { width: 100%; max-width: 300px; margin: 1rem; border-radius: 10px; }
-    form { display: flex; flex-direction: column; gap: 1rem; max-width: 500px; margin: 0 auto; }
-    input, textarea { padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
-    .map { width: 100%; height: 300px; border: none; margin-top: 2rem; }
-    .socials { display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; }
-    .socials a { text-decoration: none; font-weight: 600; color: #333; }
-    .whatsapp { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; padding: 0.75rem 1.25rem; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
-    footer { text-align: center; background: #111; color: white; padding: 2rem; margin-top: 4rem; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Innova Design Corp | Interior • Carpentry • Plumbing • Electrical</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#fafafa;
+color:#222;
+line-height:1.6;
+overflow-x:hidden;
+}
+
+img{
+max-width:100%;
+display:block;
+height:auto;
+}
+
+:root{
+--orange:#ff6b00;
+--dark:#111;
+--light:#fff;
+}
+
+/* Header */
+
+header{
+min-height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url("banner-interior.jpg") center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:40px 20px;
+color:white;
+}
+
+.hero{
+max-width:800px;
+}
+
+.hero img{
+width:clamp(90px,15vw,160px);
+margin:auto;
+background:white;
+padding:8px;
+border-radius:16px;
+margin-bottom:25px;
+}
+
+.hero h1{
+font-size:clamp(2rem,6vw,4rem);
+font-weight:800;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:clamp(1rem,2.5vw,1.3rem);
+margin-bottom:30px;
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:14px 24px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.btn-primary{
+background:var(--orange);
+color:white;
+}
+
+.btn-primary:hover{
+background:#e85f00;
+}
+
+.btn-outline{
+border:2px solid white;
+color:white;
+}
+
+.btn-outline:hover{
+background:white;
+color:black;
+}
+
+/* Navigation */
+
+nav{
+position:sticky;
+top:0;
+z-index:999;
+background:#111;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+padding:16px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:600;
+}
+
+nav a:hover{
+color:var(--orange);
+}
+
+/* Sections */
+
+section{
+width:min(92%,1100px);
+margin:auto;
+padding:80px 0;
+}
+
+h2{
+font-size:clamp(1.8rem,4vw,2.8rem);
+text-align:center;
+margin-bottom:20px;
+position:relative;
+}
+
+h2::after{
+content:"";
+display:block;
+width:70px;
+height:4px;
+background:var(--orange);
+margin:10px auto;
+border-radius:5px;
+}
+
+.about-text{
+max-width:800px;
+margin:auto;
+text-align:center;
+}
+
+/* Services */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:16px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+text-align:center;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card .icon{
+font-size:45px;
+margin-bottom:15px;
+}
+
+/* Gallery */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:18px;
+margin-top:35px;
+}
+
+.gallery img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:14px;
+transition:.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.04);
+}
+
+/* Quote */
+
+form{
+max-width:600px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+input,textarea{
+padding:15px;
+font-size:16px;
+border:1px solid #ccc;
+border-radius:10px;
+}
+
+button{
+border:none;
+cursor:pointer;
+}
+
+/* Contact */
+
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:35px;
+}
+
+.contact-box{
+background:white;
+padding:22px;
+border-radius:14px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+iframe{
+width:100%;
+height:330px;
+border:none;
+border-radius:14px;
+margin-top:30px;
+}
+
+/* Social */
+
+.socials{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:25px;
+}
+
+.socials a{
+text-decoration:none;
+font-weight:600;
+color:#333;
+}
+
+.socials a:hover{
+color:var(--orange);
+}
+
+/* Floating WhatsApp */
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+color:white;
+text-decoration:none;
+padding:15px 18px;
+border-radius:50px;
+font-weight:bold;
+box-shadow:0 8px 20px rgba(0,0,0,.25);
+z-index:999;
+}
+
+/* Footer */
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:35px 20px;
+margin-top:40px;
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+nav{
+gap:12px;
+padding:12px;
+}
+
+nav a{
+font-size:14px;
+}
+
+.gallery img{
+height:190px;
+}
+
+.whatsapp{
+padding:12px 15px;
+font-size:14px;
+}
+
+}
+
+</style>
 </head>
+
 <body>
-  <header>
-    <img src="Logo1.png" alt="Innova Design Corp Logo">
-    <h1>Innova Design Corp</h1>
-    <p>Transforming Spaces. Powering Dreams.<br>Interior Design | Electrical | Mechanical Solutions</p>
-    <br>
-    <a href="#quote" class="cta-button">Get a Free Quote</a>
-  </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#quote">Quote</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<header>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p style="text-align: center; max-width: 700px; margin: auto;">At Innova Design Corp, we specialize in interior design, electrical and mechanical engineering solutions. With years of experience and a passionate team, we create functional, aesthetic, and efficient spaces for residential, commercial, and industrial projects.</p>
-  </section>
+<div class="hero">
 
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="services">
-      <div class="service-box">
-        <h3>Interior Design</h3>
-        <p>Modern, elegant, and functional design for homes, offices, and commercial spaces.</p>
-      </div>
-      <div class="service-box">
-        <h3>Electrical Engineering</h3>
-        <p>Complete electrical installation, maintenance, and energy-efficient solutions.</p>
-      </div>
-      <div class="service-box">
-        <h3>Mechanical & FEA</h3>
-        <p>Advanced mechanical design and Finite Element Analysis for industrial engineering.</p>
-      </div>
-    </div>
-  </section>
+<img src="Logo1.png">
 
-  <section id="gallery">
-    <h2>Project Gallery</h2>
-    <div style="text-align:center">
-      <img src="interior-design.jpg" alt="Interior Design">
-      <img src="fea-analysis.jpg" alt="FEA Simulation">
-      <img src="electrical-installation.jpg" alt="Electrical Work">
-    </div>
-  </section>
+<h1>Innova Design Corp</h1>
 
-  <section id="quote">
-    <h2>Get a Free Quote</h2>
-    <form action="https://formspree.io/f/mnnzowwg" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Requirements" rows="5" required></textarea>
-      <button type="submit" class="cta-button">Submit</button>
-    </form>
-    <p style="margin-top: 1rem; text-align: center;">
-      Or <strong><a href="https://wa.me/918618671268" target="_blank" style="color: #25d366;">chat with us on WhatsApp</a></strong>
-    </p>
-  </section>
+<p>Transforming Spaces. Powering Dreams.</p>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p><strong>Innova Design Corp</strong></p>
-    <p>Phone: +91-8618671268</p>
-    <p>Email: info@innovadesigncorp.com</p>
-    <p>Website: www.innovadesigncorp.com</p>
-    <p>Office Address: 601/1, 1st Cross, Rajanna Colony, Vibhutipura, Bengaluru, Karnataka 560037</p>
-    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62273.46949698144!2d77.6452506!3d12.964065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae113a5bb5c89b%3A0xe3952db3dc04ac9c!2s601%2F1%2C%201st%20Cross%2C%20Rajanna%20Colony%2C%20Vibhutipura%2C%20Bengaluru%2C%20Karnataka%20560037!5e0!3m2!1sen!2sin!4v1691488888888!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
-    <div class="socials">
-      <a href="https://instagram.com" target="_blank">Instagram</a>
-      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-      <a href="https://facebook.com" target="_blank">Facebook</a>
-    </div>
-  </section>
+<p>Interior • Carpentry • Plumbing • Electrical • Mechanical Solutions</p>
 
-  <a class="whatsapp" href="https://wa.me/918618671268" target="_blank">Chat on WhatsApp</a>
+<div class="buttons">
+<a href="#quote" class="btn btn-primary">Get Free Quote</a>
+<a href="tel:+918618671268" class="btn btn-outline">Call Now</a>
+</div>
 
-  <footer>
-    <p>&copy; 2025 Innova Design Corp. All rights reserved.</p>
-  </footer>
+</div>
+
+</header>
+
+<nav>
+
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#quote">Quote</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+<section id="about">
+
+<h2>About Us</h2>
+
+<p class="about-text">
+
+At Innova Design Corp, we deliver premium Interior Design, Carpentry, Plumbing, Electrical and Mechanical Engineering solutions for residential, commercial and industrial projects across Bengaluru.
+
+</p>
+
+</section>
+
+<section id="services">
+
+<h2>Our Services</h2>
+
+<div class="services">
+
+<div class="card">
+<div class="icon">🏠</div>
+<h3>Interior Design</h3>
+<p>Modern and elegant interiors tailored for homes and offices.</p>
+</div>
+
+<div class="card">
+<div class="icon">🪚</div>
+<h3>Carpentry</h3>
+<p>Wardrobes, modular furniture, partitions and custom woodwork.</p>
+</div>
+
+<div class="card">
+<div class="icon">🚰</div>
+<h3>Plumbing</h3>
+<p>Water pipelines, bathroom fittings and maintenance services.</p>
+</div>
+
+<div class="card">
+<div class="icon">⚡</div>
+<h3>Electrical</h3>
+<p>Installation, maintenance and energy-efficient solutions.</p>
+</div>
+
+<div class="card">
+<div class="icon">⚙️</div>
+<h3>Mechanical & FEA</h3>
+<p>Mechanical design and Finite Element Analysis support.</p>
+</div>
+
+<div class="card">
+<div class="icon">🏢</div>
+<h3>Civil Works</h3>
+<p>Renovation, partitions, ceilings and finishing works.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery">
+
+<h2>Project Gallery</h2>
+
+<div class="gallery">
+
+<img src="interior-design.jpg" alt="">
+<img src="fea-analysis.jpg" alt="">
+<img src="electrical-installation.jpg" alt="">
+
+</div>
+
+</section>
+
+<section id="quote">
+
+<h2>Get a Free Quote</h2>
+
+<form action="https://formspree.io/f/mnnzowwg" method="POST">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="email" name="email" placeholder="Your Email" required>
+
+<textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+
+<button class="btn btn-primary">Submit Request</button>
+
+</form>
+
+<p style="text-align:center;margin-top:20px;">
+
+or
+
+<a href="https://wa.me/918618671268" style="color:#25D366;font-weight:bold;">Chat on WhatsApp</a>
+
+</p>
+
+</section>
+
+<section id="contact">
+
+<h2>Contact Us</h2>
+
+<div class="contact-grid">
+
+<div class="contact-box">
+<h3>📞 Phone</h3>
+<p>+91 8618671268</p>
+</div>
+
+<div class="contact-box">
+<h3>✉ Email</h3>
+<p>info@innovadesigncorp.com</p>
+</div>
+
+<div class="contact-box">
+<h3>📍 Office</h3>
+<p>601/1, Rajanna Colony, Vibhutipura, Bengaluru – 560037</p>
+</div>
+
+</div>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62273.46949698144!2d77.6452506!3d12.964065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae113a5bb5c89b%3A0xe3952db3dc04ac9c!2s601%2F1%2C%201st%20Cross%2C%20Rajanna%20Colony%2C%20Vibhutipura%2C%20Bengaluru%2C%20Karnataka%20560037!5e0!3m2!1sen!2sin!4v1691488888888!5m2!1sen!2sin" loading="lazy"></iframe>
+
+<div class="socials">
+
+<a href="https://instagram.com">Instagram</a>
+<a href="https://facebook.com">Facebook</a>
+<a href="https://linkedin.com">LinkedIn</a>
+
+</div>
+
+</section>
+
+<a class="whatsapp" href="https://wa.me/918618671268">WhatsApp</a>
+
+<footer>
+
+<p>© 2025 Innova Design Corp. All Rights Reserved.</p>
+
+</footer>
+
 </body>
 </html>
