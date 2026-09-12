@@ -42,14 +42,11 @@ height:auto;
 /* Header */
 
 header{
-min-height:40vh;
-background:
-linear-gradient(180deg, rgba(4,44,83,.65), rgba(4,44,83,.82)),
-url("banner-interior.jpg") center/cover;
+min-height:100vh;
+background:url("banner-interior.jpg") center/cover;
 display:flex;
 align-items:center;
 justify-content:center;
-text-align:center;
 padding:40px 20px;
 color:#fff;
 }
@@ -60,7 +57,12 @@ align-items:center;
 justify-content:center;
 gap:45px;
 max-width:900px;
+width:100%;
 text-align:left;
+background:linear-gradient(180deg, rgba(4,44,83,.72), rgba(4,44,83,.85));
+border-radius:24px;
+padding:50px 60px;
+box-shadow:0 20px 50px rgba(0,0,0,.35);
 }
 
 .hero-text{
@@ -122,6 +124,8 @@ flex-wrap:wrap;
 .hero{
 flex-direction:column;
 text-align:center;
+padding:36px 26px;
+width:92%;
 }
 
 .hero-text{
@@ -216,9 +220,17 @@ border-radius:5px;
 }
 
 .about-text{
-max-width:800px;
+max-width:900px;
 margin:auto;
 text-align:center;
+}
+
+.about-text p{
+margin-bottom:18px;
+}
+
+.about-text p:last-child{
+margin-bottom:0;
 }
 
 /* Services */
@@ -368,6 +380,73 @@ box-shadow:0 8px 20px rgba(0,0,0,.25);
 z-index:999;
 }
 
+/* Trusted Partners */
+
+.partners{
+background:#fff;
+text-align:center;
+}
+
+.partners .eyebrow{
+color:var(--blue);
+font-weight:700;
+letter-spacing:2px;
+font-size:.85rem;
+text-transform:uppercase;
+margin-bottom:6px;
+}
+
+.partners-grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+align-items:center;
+gap:25px;
+margin-top:40px;
+}
+
+.partner-card{
+display:flex;
+align-items:center;
+gap:12px;
+padding:22px 42px;
+border:1px solid #e3edf7;
+border-radius:16px;
+background:#fafbfc;
+box-shadow:0 8px 20px rgba(4,44,83,.06);
+transition:.3s;
+}
+
+.partner-card:hover{
+transform:translateY(-6px);
+box-shadow:0 14px 28px rgba(4,44,83,.12);
+border-color:var(--blue);
+}
+
+.partner-card .partner-icon{
+width:38px;
+height:38px;
+border-radius:50%;
+background:linear-gradient(150deg, var(--blue), var(--navy));
+flex-shrink:0;
+}
+
+.partner-card .partner-name{
+font-size:1.4rem;
+font-weight:800;
+letter-spacing:.5px;
+color:var(--navy);
+}
+
+.partner-card .partner-tag{
+display:block;
+font-size:.7rem;
+font-weight:600;
+letter-spacing:1px;
+color:var(--blue);
+margin-top:2px;
+}
+
 /* Footer */
 
 footer{
@@ -448,34 +527,19 @@ font-size:14px;
 
 <h2>About Us</h2>
 
-<p class="about-text">
+<div class="about-text">
 
-About Innova Design Corp
+<p>Innova Design Corp is a Bengaluru-based integrated MEP engineering and facility solutions company, built to take projects from first sketch to final commissioning under one roof. Rather than coordinating separate vendors for design, supply, installation and upkeep, our clients work with a single accountable team across the full project lifecycle — reducing delays, miscommunication, and cost overruns that typically arise when multiple contractors are involved.</p>
 
-Innova Design Corp is a Bengaluru-based integrated MEP engineering and facility solutions company, built to take projects from first sketch to final commissioning under one roof. Rather than coordinating separate vendors for design, supply, installation and upkeep, our clients work with a single accountable team across the full project lifecycle — reducing delays, miscommunication, and cost overruns that typically arise when multiple contractors are involved.
+<p>Our core strength lies in MEP turnkey execution — end-to-end design, supply, and installation of Mechanical, Electrical and Plumbing systems for residential, commercial, and industrial spaces. This is backed by dedicated capability in HVAC and electrical systems, plumbing and fire protection, preventive and corrective maintenance (AMC), and energy audits with calibration and optimisation — ensuring buildings don't just get built well, but continue performing efficiently long after handover.</p>
 
-Our core strength lies in MEP turnkey execution — end-to-end design, supply, and installation of Mechanical, Electrical and Plumbing systems for residential, commercial, and industrial spaces. This is backed by dedicated capability in HVAC and electrical systems, plumbing and fire protection, preventive and corrective maintenance (AMC), and energy audits with calibration and optimisation — ensuring buildings don't just get built well, but continue performing efficiently long after handover.
+<p>Beyond core MEP, our team also delivers interior design, custom carpentry, civil works, and mechanical/FEA engineering support, allowing us to serve clients who need both the technical infrastructure and the finished spatial experience handled by one partner. Whether it's a new office fit-out, an industrial facility upgrade, or a residential renovation, we bring the same integrated, detail-driven approach.</p>
 
-Beyond core MEP, our team also delivers interior design, custom carpentry, civil works, and mechanical/FEA engineering support, allowing us to serve clients who need both the technical infrastructure and the finished spatial experience handled by one partner. Whether it's a new office fit-out, an industrial facility upgrade, or a residential renovation, we bring the same integrated, detail-driven approach.
+<p>We work with trusted material and hardware partners to ensure consistent quality, and every project is managed with clear timelines, transparent communication, and hands-on project management from our team — from initial design and cost estimation through execution, commissioning, and post-handover support.</p>
 
-We work with trusted material and hardware partners to ensure consistent quality, and every project is managed with clear timelines, transparent communication, and hands-on project management from our team — from initial design and cost estimation through execution, commissioning, and post-handover support.
+<p><strong>Our mission</strong> is simple: to make MEP and facility engineering feel less like managing contractors, and more like working with one dependable partner — from design to commissioning, and from maintenance to energy optimisation.</p>
 
-Our mission is simple: to make MEP and facility engineering feel less like managing contractors, and more like working with one dependable partner — from design to commissioning, and from maintenance to energy optimisation.
-
-</p>
-
-</section>
-
-<section id="Mission">
-
-<h2>Our mission</h2>
-
-<p class="mission-text">
-
-Our mission
-Our mission is simple: to make MEP and facility engineering feel less like managing contractors, and more like working with one dependable partner — from design to commissioning, and from maintenance to energy optimisation.
-
-</p>
+</div>
 
 </section>
 
@@ -534,11 +598,7 @@ Our mission is simple: to make MEP and facility engineering feel less like manag
 <img src="interior-design.jpg" alt="">
 <img src="fea-analysis.jpg" alt="">
 <img src="electrical-installation.jpg" alt="">
-<img src="fea-analysis.jpg.png" alt="">
-<img src="Image_2.png" alt="">
-<img src="Image_3.png" alt="">
-<img src="Image_4.png" alt="">
-  
+
 </div>
 
 </section>
@@ -599,6 +659,25 @@ or
 <a href="https://instagram.com">Instagram</a>
 <a href="https://facebook.com">Facebook</a>
 <a href="https://linkedin.com">LinkedIn</a>
+
+</div>
+
+</section>
+
+<section id="partners" class="partners">
+
+<div class="eyebrow">Who We Work With</div>
+<h2>Our Trusted Partners</h2>
+
+<div class="partners-grid">
+
+<div class="partner-card">
+<div class="partner-icon"></div>
+<div>
+<div class="partner-name">LUMEN</div>
+<span class="partner-tag">TECHNOLOGY</span>
+</div>
+</div>
 
 </div>
 
