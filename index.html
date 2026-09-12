@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MEP TURNKEY • PROJECT MGMT • HVAC ELECTRICAL • MAINTENANCE & AMC • Electrical • ELERGY & CALIBRATION</title>
+<title>Innova Design Corp | Integrated MEP Engineering & Facility Solutions</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
@@ -31,7 +31,10 @@ height:auto;
 }
 
 :root{
---orange:#ff6b00;
+--navy:#042C53;      /* brand navy - matches logo & signage */
+--blue:#185FA5;       /* brand blue - matches logo & signage */
+--blue-light:#BFD9F2; /* soft blue for secondary text on dark bg */
+--orange:#ff6b00;     /* accent - keep, pairs well with navy */
 --dark:#111;
 --light:#fff;
 }
@@ -41,14 +44,14 @@ height:auto;
 header{
 min-height:100vh;
 background:
-linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+linear-gradient(180deg, rgba(4,44,83,.65), rgba(4,44,83,.82)),
 url("banner-interior.jpg") center/cover;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
 padding:40px 20px;
-color:blue;
+color:#fff;
 }
 
 .hero{
@@ -58,20 +61,43 @@ max-width:800px;
 .hero img{
 width:clamp(90px,15vw,160px);
 margin:auto;
-background:white;
-padding:8px;
-border-radius:16px;
+background:transparent;
+padding:0;
+border-radius:50%;
 margin-bottom:25px;
+filter:drop-shadow(0 8px 20px rgba(0,0,0,.35));
 }
 
 .hero h1{
 font-size:clamp(2rem,6vw,4rem);
 font-weight:800;
+letter-spacing:1px;
+color:#ffffff;
+text-shadow:0 2px 12px rgba(0,0,0,.45);
 margin-bottom:15px;
 }
 
-.hero p{
+.hero .subtitle{
 font-size:clamp(1rem,2.5vw,1.3rem);
+font-weight:600;
+letter-spacing:1.5px;
+color:var(--blue-light);
+margin-bottom:18px;
+}
+
+.hero .tagline{
+font-size:clamp(.95rem,2.2vw,1.15rem);
+font-style:italic;
+font-weight:400;
+color:rgba(255,255,255,.85);
+margin-bottom:22px;
+}
+
+.hero .services-line{
+font-size:clamp(.85rem,2vw,1rem);
+font-weight:600;
+letter-spacing:.5px;
+color:#FFD9A8;
 margin-bottom:30px;
 }
 
@@ -100,13 +126,13 @@ background:#e85f00;
 }
 
 .btn-outline{
-border:2px solid white;
-color:white;
+border:2px solid #ffffff;
+color:#ffffff;
 }
 
 .btn-outline:hover{
-background:white;
-color:black;
+background:#ffffff;
+color:var(--navy);
 }
 
 /* Navigation */
@@ -115,7 +141,7 @@ nav{
 position:sticky;
 top:0;
 z-index:999;
-background:#111;
+background:var(--navy);
 display:flex;
 justify-content:center;
 gap:20px;
@@ -146,6 +172,7 @@ font-size:clamp(1.8rem,4vw,2.8rem);
 text-align:center;
 margin-bottom:20px;
 position:relative;
+color:var(--navy);
 }
 
 h2::after{
@@ -180,10 +207,16 @@ border-radius:16px;
 box-shadow:0 10px 25px rgba(0,0,0,.08);
 transition:.3s;
 text-align:center;
+border-top:3px solid var(--blue);
 }
 
 .card:hover{
 transform:translateY(-8px);
+box-shadow:0 14px 30px rgba(4,44,83,.15);
+}
+
+.card h3{
+color:var(--navy);
 }
 
 .card .icon{
@@ -229,6 +262,11 @@ border:1px solid #ccc;
 border-radius:10px;
 }
 
+input:focus,textarea:focus{
+outline:none;
+border-color:var(--blue);
+}
+
 button{
 border:none;
 cursor:pointer;
@@ -248,6 +286,12 @@ background:white;
 padding:22px;
 border-radius:14px;
 box-shadow:0 8px 20px rgba(0,0,0,.08);
+border-left:4px solid var(--blue);
+}
+
+.contact-box h3{
+color:var(--navy);
+margin-bottom:8px;
 }
 
 iframe{
@@ -271,7 +315,7 @@ margin-top:25px;
 .socials a{
 text-decoration:none;
 font-weight:600;
-color:#333;
+color:var(--navy);
 }
 
 .socials a:hover{
@@ -297,7 +341,7 @@ z-index:999;
 /* Footer */
 
 footer{
-background:#111;
+background:var(--navy);
 color:white;
 text-align:center;
 padding:35px 20px;
@@ -341,11 +385,11 @@ font-size:14px;
 
 <h1>INNOVA DESIGN CORP</h1>
 
-<p>INTEGRATED MEP ENGINEERING & FACILITY SOLUTIONS.</p>
+<p class="subtitle">INTEGRATED MEP ENGINEERING &amp; FACILITY SOLUTIONS</p>
 
-<p>From design to commissioning — from maintenance to energy optimisation.</p>
+<p class="tagline">From design to commissioning — from maintenance to energy optimisation.</p>
 
-<p>MEP TURNKEY • PROJECT MGMT • HVAC ELECTRICAL • MAINTENANCE & AMC • Electrical • ELERGY & CALIBRATION</p>
+<p class="services-line">MEP TURNKEY &bull; PROJECT MGMT &bull; HVAC &amp; ELECTRICAL &bull; MAINTENANCE &amp; AMC &bull; ENERGY &amp; CALIBRATION</p>
 
 <div class="buttons">
 <a href="#quote" class="btn btn-primary">Get Free Quote</a>
